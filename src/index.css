@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 28 20% 98%;
+    --foreground: 15 25% 15%;
+
+    --card: 30 25% 96%;
+    --card-foreground: 15 25% 15%;
+
+    --popover: 30 25% 96%;
+    --popover-foreground: 15 25% 15%;
+
+    --primary: 315 45% 35%;
+    --primary-foreground: 28 25% 98%;
+
+    --secondary: 35 30% 85%;
+    --secondary-foreground: 15 25% 25%;
+
+    --muted: 35 20% 90%;
+    --muted-foreground: 15 15% 45%;
+
+    --accent: 45 85% 60%;
+    --accent-foreground: 15 25% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 35 20% 88%;
+    --input: 35 20% 88%;
+    --ring: 315 45% 35%;
+
+    /* Spiritual & Tantric Design Tokens */
+    --sacred-purple: 280 45% 25%;
+    --sacred-gold: 45 85% 60%;
+    --rose-blush: 340 35% 75%;
+    --earth-brown: 25 40% 35%;
+    --sunset-orange: 25 85% 65%;
+    --lotus-pink: 330 25% 85%;
+    --chakra-violet: 270 35% 45%;
+    
+    /* Gradients */
+    --gradient-sacred: linear-gradient(135deg, hsl(var(--sacred-purple)), hsl(var(--chakra-violet)));
+    --gradient-sunset: linear-gradient(135deg, hsl(var(--sunset-orange)), hsl(var(--sacred-gold)));
+    --gradient-gentle: linear-gradient(180deg, hsl(var(--lotus-pink)), hsl(var(--background)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--sacred-purple)), hsl(var(--primary)), hsl(var(--sacred-gold)));
+    
+    /* Shadows */
+    --shadow-sacred: 0 20px 40px -10px hsl(var(--sacred-purple) / 0.2);
+    --shadow-gentle: 0 10px 30px -5px hsl(var(--primary) / 0.1);
+    
+    /* Animations */
+    --transition-sacred: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    --radius: 1rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 15 25% 8%;
+    --foreground: 28 25% 95%;
+
+    --card: 15 25% 12%;
+    --card-foreground: 28 25% 95%;
+
+    --popover: 15 25% 12%;
+    --popover-foreground: 28 25% 95%;
+
+    --primary: 315 45% 65%;
+    --primary-foreground: 15 25% 8%;
+
+    --secondary: 15 15% 20%;
+    --secondary-foreground: 28 25% 95%;
+
+    --muted: 15 15% 18%;
+    --muted-foreground: 28 15% 65%;
+
+    --accent: 45 85% 60%;
+    --accent-foreground: 15 25% 8%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 15 15% 22%;
+    --input: 15 15% 22%;
+    --ring: 315 45% 65%;
+    
+    /* Dark mode spiritual colors */
+    --sacred-purple: 280 55% 45%;
+    --sacred-gold: 45 85% 70%;
+    --rose-blush: 340 35% 65%;
+    --earth-brown: 25 40% 45%;
+    --sunset-orange: 25 85% 75%;
+    --lotus-pink: 330 25% 75%;
+    --chakra-violet: 270 45% 65%;
+    
+    /* Dark gradients */
+    --gradient-sacred: linear-gradient(135deg, hsl(var(--sacred-purple)), hsl(var(--chakra-violet)));
+    --gradient-sunset: linear-gradient(135deg, hsl(var(--sunset-orange)), hsl(var(--sacred-gold)));
+    --gradient-gentle: linear-gradient(180deg, hsl(var(--lotus-pink)), hsl(var(--background)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--sacred-purple)), hsl(var(--primary)), hsl(var(--sacred-gold)));
+    
+    --shadow-sacred: 0 20px 40px -10px hsl(var(--sacred-purple) / 0.3);
+    --shadow-gentle: 0 10px 30px -5px hsl(var(--primary) / 0.2);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
